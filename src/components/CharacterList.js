@@ -23,7 +23,7 @@ const [charList, setCharList] = useState([])
   return (
     <section className="character-list">
       {charList.map((item) => (
-         <CharacterCard name={item.name}   /> 
+         <CharacterCard name={item.name} image={item.image}  /> 
         
   ))}
    

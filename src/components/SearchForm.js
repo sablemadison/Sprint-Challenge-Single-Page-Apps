@@ -1,5 +1,14 @@
 import React, { useState } from "react";
+import styled from 'styled-components';
 
+const StyledLi = styled.li`
+border:1px dotted steelblue;
+width: 500px;
+margin 0 auto;
+background-color:white;
+color: steelblue;
+opacity: .8;
+ `
 export default function SearchForm() {
  
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -27,7 +36,7 @@ export default function SearchForm() {
       />
       <ul>
        {results.map(item => ( 
-         <li>{item}</li>
+         <StyledLi>{item}</StyledLi>
        ))}
       </ul>
      </div>
