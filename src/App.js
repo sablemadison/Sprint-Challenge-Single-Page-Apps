@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 import axios from 'axios';
-
+import SearchForm from './components/SearchForm';
 
 export default function App() {
   const [charList, setCharList] = useState()
@@ -14,7 +14,7 @@ export default function App() {
     axios.get('https://rickandmortyapi.com/api/character/')
     .then(objData => {
       console.log('data here:', objData.data.results)
-      setCharList(objData.data.results)
+      setCharList(objData.data)
     })
     .then(error => {
       console.log('error here', error)
@@ -26,6 +26,7 @@ export default function App() {
       <Header />
       <Route exact path='/' component={WelcomePage}/>
       <Route path="/characters" component={CharacterList} />
+      <Route path='/search' component ={SearchForm} />
     </main>
     </div>
   );
