@@ -28,7 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
-
+Since the whole application is loaded initially, only the state that has changed will need to be updated later. This can make it faster to switch  between different routes. Unnecessary data won't be requested.
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
